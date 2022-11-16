@@ -1,0 +1,4 @@
+#!/bin/bash
+go get github.com/oz123/coredns-netbox-plugin
+go generate
+go build
