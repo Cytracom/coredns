@@ -39,12 +39,9 @@ jobs:
         go get github.com/oz123/coredns-netbox-plugin
         go generate
         GOOS=linux go build .
-        mv coredns coredns-linux
-        GOOS=darwin go build .
-        mv coredns coredns-darwin
     - name: Upload the artifacts
       uses: skx/github-action-publish-binaries@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        args: 'coredns-*'
+        args: 'coredns'
