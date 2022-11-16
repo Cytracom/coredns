@@ -41,5 +41,6 @@ jobs:
     # Run build of the application
     - name: Run build
       run: |
+        go get github.com/oz123/coredns-netbox-plugin
         go generate
         go build . 
