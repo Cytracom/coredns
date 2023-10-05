@@ -40,8 +40,7 @@ jobs:
         go generate
         GOOS=linux go build .
     - name: Upload the artifacts
-      uses: skx/github-action-publish-binaries@master
-      env:
-        GITHUB_TOKEN: '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'
+      uses: AButler/upload-release-assets@v2.0
       with:
-        args: 'coredns'
+        repo-token: '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'
+        files: 'coredns'
